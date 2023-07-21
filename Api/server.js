@@ -9,7 +9,7 @@ const app = express()
 app.use(
   cors({
     origin: ['https://mern-project-client-three.vercel.app'],
-    methods: ['post', 'get'],
+    methods: ['POST', 'GET'],
     credentials: true,
   })
 )
