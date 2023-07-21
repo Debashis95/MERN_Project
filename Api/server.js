@@ -6,7 +6,13 @@ const cors = require('cors')
 const userModel = require('./model/model')
 
 const app = express()
-app.use(cors())
+app.use(
+  cors({
+    origin: ['https://mern-project-client-three.vercel.app/'],
+    methods: ['post', 'get'],
+    credentials: true,
+  })
+)
 const port = 7000
 
 app.use(express.urlencoded({ extended: true }))
